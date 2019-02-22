@@ -4,8 +4,6 @@ A project dervied from my [FRC 2019 Shuffleboard widget tutorial](https://github
 
 
 
-
-
 ## VorTx 3735 Text Status Indicator Widget
 
 This widget displays 4 states in response to bound number ranges.

@@ -2,8 +2,8 @@
 .neutral {
     -fx-background-color: 
         linear-gradient(to bottom, #A4ECF2 0%, #94C7E3 50%, #6080D1 100%, #7CA9EB 100%);
-    -fx-background-insets: 0,1,4,5;
-    -fx-background-radius: 9,8,5,4;
+    -fx-background-insets: -3;
+    -fx-background-radius: 6;
     -fx-padding: 15 30 15 30;
     -fx-font-family: "Monospace";
     -fx-font-size: 28px;
@@ -15,8 +15,8 @@
 .normal {
     -fx-background-color: 
         linear-gradient(to bottom, #A3F0B7 0%, #9EE398 50%, #82CF5F 100%, #91EB7C 100%);
-    -fx-background-insets: 0,1,4,5;
-    -fx-background-radius: 9,8,5,4;
+    -fx-background-insets: -3;
+    -fx-background-radius: 6;
     -fx-padding: 15 30 15 30;
     -fx-font-family: "Monospace";
     -fx-font-size: 28px;
@@ -27,9 +27,9 @@
 .warning {
     -fx-background-color: 
         linear-gradient(to bottom, #FCFCB6 0%, #F5F378 50%, #FCFC03 100%, #F2F246 100%);
-    -fx-background-insets: 0,1,4,5;
-    -fx-background-radius: 9,8,5,4;
-    -fx-padding: 15 30 15 30;
+        -fx-background-insets: -3;
+        -fx-background-radius: 6;
+        -fx-padding: 15 30 15 30;
     -fx-font-family: "Monospace";
     -fx-font-size: 28px;
     -fx-font-weight: bold;
@@ -39,9 +39,9 @@
 .alert {
     -fx-background-color: 
         linear-gradient(to bottom, #FF9C9C 0%, #FC6F6F 50%, #FA0505 100%, #F04646 100%);
-    -fx-background-insets: 0,1,4,5;
-    -fx-background-radius: 9,8,5,4;
-    -fx-padding: 15 30 15 30;
+        -fx-background-insets: -3;
+        -fx-background-radius: 6;
+        -fx-padding: 15 30 15 30;
     -fx-font-family: "Monospace";
     -fx-font-size: 28px;
     -fx-font-weight: bold;
