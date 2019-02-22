@@ -1,0 +1,9 @@
+
+
+<?import javafx.scene.control.Label ?>
+
+<fx:root fx:id="_wrapper" type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml" stylesheets="/css/states.css">
+
+    <Label fx:id="_textContent" wrapText="true" alignment="CENTER" prefWidth="${_wrapper.width}" prefHeight="${_wrapper.height}" 
+        styleClass="neutral" />
+</fx:root>

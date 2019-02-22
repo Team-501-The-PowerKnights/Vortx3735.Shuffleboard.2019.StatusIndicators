@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import edu.vortx3735.components.StatusText?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.vortx3735.status.widgets.TextIndicator" fx:id="_thePane">
+	<StatusText fx:id="_statusText" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"  />
+</AnchorPane>
+
