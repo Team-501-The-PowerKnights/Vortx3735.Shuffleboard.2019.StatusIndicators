@@ -61,13 +61,20 @@ task deployWidget (type: Copy, group: "Shuffleboard Widget", description: "Copy 
 }
 
 
+jar {
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api 'org.apache.commons:commons-math3:3.6.1'
 
     // Installed FRC Shuffleboard jar.  Keep this so it knows how to resolve
     // the shuffleboard dependencies
-    compile getShuffleboardJar ()
+    api getShuffleboardJar ()
 
     compile 'io.github.typhon0:AnimateFX:1.2.1'
     
