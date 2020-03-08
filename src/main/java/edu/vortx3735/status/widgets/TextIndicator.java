@@ -18,7 +18,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 
-@Description(dataTypes = { NumberType.class }, name = "VorTx 3735 Text Status Indicator")
+@Description(dataTypes = { NumberType.class }, name = "Multicolor selector")
 @ParametrizedController(value = "TextIndicator.fxml")
 public class TextIndicator extends BorderlessSimpleAnnotatedWidget<Number> {
 
@@ -30,17 +30,41 @@ public class TextIndicator extends BorderlessSimpleAnnotatedWidget<Number> {
 
 	private StatusText.DisplayState _lastState = StatusText.DisplayState.NEUTRAL;
 
-	private SimpleDoubleProperty _normalMin = new SimpleDoubleProperty(0.0);
-	private SimpleDoubleProperty _normalMax = new SimpleDoubleProperty(0.0);
-	private SimpleBooleanProperty _normalAnimate = new SimpleBooleanProperty(false);
+	private SimpleDoubleProperty _greenMin = new SimpleDoubleProperty(0.0);
+	private SimpleDoubleProperty _greenMax = new SimpleDoubleProperty(0.0);
+	private SimpleBooleanProperty _greenAnimate = new SimpleBooleanProperty(false);
 
-	private SimpleDoubleProperty _warningMin = new SimpleDoubleProperty(0.0);
-	private SimpleDoubleProperty _warningMax = new SimpleDoubleProperty(0.0);
-	private SimpleBooleanProperty _warningAnimate = new SimpleBooleanProperty(false);
+	private SimpleDoubleProperty _redMin = new SimpleDoubleProperty(0.0);
+	private SimpleDoubleProperty _redMax = new SimpleDoubleProperty(0.0);
+	private SimpleBooleanProperty _redAnimate = new SimpleBooleanProperty(false);
 
-	private SimpleDoubleProperty _alertMin = new SimpleDoubleProperty(0.0);
-	private SimpleDoubleProperty _alertMax = new SimpleDoubleProperty(0.0);
-	private SimpleBooleanProperty _alertAnimate = new SimpleBooleanProperty(false);
+	private SimpleDoubleProperty _yellowMin = new SimpleDoubleProperty(0.0);
+	private SimpleDoubleProperty _yellowMax = new SimpleDoubleProperty(0.0);
+	private SimpleBooleanProperty _yellowAnimate = new SimpleBooleanProperty(false);
+
+	private SimpleDoubleProperty _blackMin = new SimpleDoubleProperty(0.0);
+	private SimpleDoubleProperty _blackMax = new SimpleDoubleProperty(0.0);
+	private SimpleBooleanProperty _blackAnimate = new SimpleBooleanProperty(false);
+
+	private SimpleDoubleProperty _greyMin = new SimpleDoubleProperty(0.0);
+	private SimpleDoubleProperty _greyMax = new SimpleDoubleProperty(0.0);
+	private SimpleBooleanProperty _greyAnimate = new SimpleBooleanProperty(false);
+
+	private SimpleDoubleProperty _wheelRedMin = new SimpleDoubleProperty(0.0);
+	private SimpleDoubleProperty _wheelRedMax = new SimpleDoubleProperty(0.0);
+	private SimpleBooleanProperty _wheelRedAnimate = new SimpleBooleanProperty(false);
+
+	private SimpleDoubleProperty _wheelYellowMin = new SimpleDoubleProperty(0.0);
+	private SimpleDoubleProperty _wheelYellowMax = new SimpleDoubleProperty(0.0);
+	private SimpleBooleanProperty _wheelYellowAnimate = new SimpleBooleanProperty(false);
+
+	private SimpleDoubleProperty _wheelGreenMin = new SimpleDoubleProperty(0.0);
+	private SimpleDoubleProperty _wheelGreenMax = new SimpleDoubleProperty(0.0);
+	private SimpleBooleanProperty _wheelGreenAnimate = new SimpleBooleanProperty(false);
+
+	private SimpleDoubleProperty _wheelBlueMin = new SimpleDoubleProperty(0.0);
+	private SimpleDoubleProperty _wheelBlueMax = new SimpleDoubleProperty(0.0);
+	private SimpleBooleanProperty _wheelBlueAnimate = new SimpleBooleanProperty(false);
 
 	public Pane getView() {
 		return _thePane;
@@ -51,59 +75,162 @@ public class TextIndicator extends BorderlessSimpleAnnotatedWidget<Number> {
 
 		LinkedList<Group> propertyList = new LinkedList<Group>();
 
-		propertyList.add(Group.of("Definition of Normal",
-				Setting.of("Min", "The minimum value in the range of values.", _normalMin, Double.class),
-				Setting.of("Max", "The maximum value in the range of values.", _normalMax, Double.class), Setting.of(
-						"Animate", "Turn on/off animation each time data is received", _normalAnimate, Boolean.class)));
+		propertyList.add(Group.of("Definition of Black",
+				Setting.of("Min", "The minimum value in the range of values.", _blackMin, Double.class),
+				Setting.of("Max", "The maximum value in the range of values.", _blackMax, Double.class), Setting.of(
+						"Animate", "Turn on/off animation each time data is received", _blackAnimate, Boolean.class)));
 
-		propertyList.add(Group.of("Definition of Warning",
-				Setting.of("Min", "The minimum value in the range of values.", _warningMin, Double.class),
-				Setting.of("Max", "The maximum value in the range of values.", _warningMax, Double.class),
-				Setting.of("Animate", "Turn on/off animation each time data is received", _warningAnimate,
-						Boolean.class)));
+		propertyList.add(Group.of("Definition of Grey",
+				Setting.of("Min", "The minimum value in the range of values.", _greyMin, Double.class),
+				Setting.of("Max", "The maximum value in the range of values.", _greyMax, Double.class), Setting.of(
+						"Animate", "Turn on/off animation each time data is received", _greyAnimate, Boolean.class)));
+		
+		propertyList.add(Group.of("Definition of Green",
+				Setting.of("Min", "The minimum value in the range of values.", _greenMin, Double.class),
+				Setting.of("Max", "The maximum value in the range of values.", _greenMax, Double.class), Setting.of(
+						"Animate", "Turn on/off animation each time data is received", _greenAnimate, Boolean.class)));
 
-		propertyList.add(Group.of("Definition of Alert",
-				Setting.of("Min", "The minimum value in the range of values.", _alertMin, Double.class),
-				Setting.of("Max", "The maximum value in the range of values.", _alertMax, Double.class), Setting.of(
-						"Animate", "Turn on/off animation each time data is received", _alertAnimate, Boolean.class)));
+		propertyList.add(Group.of("Definition of Yellow",
+				Setting.of("Min", "The minimum value in the range of values.", _yellowMin, Double.class),
+				Setting.of("Max", "The maximum value in the range of values.", _yellowMax, Double.class),
+				Setting.of("Animate", "Turn on/off animation each time data is received", _yellowAnimate, Boolean.class)));
+
+		propertyList.add(Group.of("Definition of Red",
+				Setting.of("Min", "The minimum value in the range of values.", _redMin, Double.class),
+				Setting.of("Max", "The maximum value in the range of values.", _redMax, Double.class), 
+				Setting.of("Animate", "Turn on/off animation each time data is received", _redAnimate, Boolean.class)));
+
+		propertyList.add(Group.of("Definition of Wheel Red",
+				Setting.of("Min", "The minimum value in the range of values.", _wheelRedMin, Double.class),
+				Setting.of("Max", "The maximum value in the range of values.", _wheelRedMax, Double.class), 
+				Setting.of("Animate", "Turn on/off animation each time data is received", _wheelRedAnimate, Boolean.class)));
+
+		propertyList.add(Group.of("Definition of Wheel Yellow",
+				Setting.of("Min", "The minimum value in the range of values.", _wheelYellowMin, Double.class),
+				Setting.of("Max", "The maximum value in the range of values.", _wheelYellowMax, Double.class), 
+				Setting.of("Animate", "Turn on/off animation each time data is received", _wheelYellowAnimate, Boolean.class)));
+
+		propertyList.add(Group.of("Definition of Wheel Green",
+				Setting.of("Min", "The value that corresponds to a display color of green.", _wheelGreenMin, Double.class),
+				Setting.of("Max", "The maximum value in the range of values.", _wheelGreenMax, Double.class), 
+				Setting.of("Animate", "Turn on/off animation each time data is received", _wheelGreenAnimate, Boolean.class)));
+
+		propertyList.add(Group.of("Definition of Wheel Blue",
+				Setting.of("Min", "The minimum value in the range of values.", _wheelBlueMin, Double.class),
+				Setting.of("Max", "The maximum value in the range of values.", _wheelBlueMax, Double.class), 
+				Setting.of("Animate", "Turn on/off animation each time data is received", _wheelBlueAnimate, Boolean.class)));
+		
 
 		return propertyList;
 	}
 
 	private void setState(Double forValue) {
 
-		if (forValue >= _normalMin.doubleValue() && forValue <= _normalMax.doubleValue()) {
-			if (_normalAnimate.getValue())
+		if (forValue >= _blackMin.doubleValue() && forValue <= _blackMax.doubleValue()) {
+			if (_blackAnimate.getValue())
 				_statusText.doAnimateOnData();
 
-			if (_lastState == StatusText.DisplayState.NORMAL)
+			if (_lastState == StatusText.DisplayState.BLACK)
 				return;
 
-			_lastState = StatusText.DisplayState.NORMAL;
+			_lastState = StatusText.DisplayState.BLACK;
 			_statusText.displayStateProperty().set(_lastState);
 			return;
 		}
 
-		if (forValue >= _warningMin.doubleValue() && forValue <= _warningMax.doubleValue()) {
-			if (_warningAnimate.getValue())
+		if (forValue >= _greyMin.doubleValue() && forValue <= _greyMax.doubleValue()) {
+			if (_greyAnimate.getValue())
 				_statusText.doAnimateOnData();
 
-			if (_lastState == StatusText.DisplayState.WARNING)
+			if (_lastState == StatusText.DisplayState.GREY)
 				return;
 
-			_lastState = StatusText.DisplayState.WARNING;
+			_lastState = StatusText.DisplayState.GREY;
+			_statusText.displayStateProperty().set(_lastState);
+			return;
+		}
+		
+		
+		if (forValue >= _greenMin.doubleValue() && forValue <= _greenMax.doubleValue()) {
+			if (_greenAnimate.getValue())
+				_statusText.doAnimateOnData();
+
+			if (_lastState == StatusText.DisplayState.GREEN)
+				return;
+
+			_lastState = StatusText.DisplayState.GREEN;
 			_statusText.displayStateProperty().set(_lastState);
 			return;
 		}
 
-		if (forValue >= _alertMin.doubleValue() && forValue <= _alertMax.doubleValue()) {
-			if (_alertAnimate.getValue())
+		if (forValue >= _yellowMin.doubleValue() && forValue <= _yellowMax.doubleValue()) {
+			if (_yellowAnimate.getValue())
 				_statusText.doAnimateOnData();
 
-			if (_lastState == StatusText.DisplayState.ALERT)
+			if (_lastState == StatusText.DisplayState.YELLOW)
 				return;
 
-			_lastState = StatusText.DisplayState.ALERT;
+			_lastState = StatusText.DisplayState.YELLOW;
+			_statusText.displayStateProperty().set(_lastState);
+			return;
+		}
+
+		if (forValue >= _redMin.doubleValue() && forValue <= _redMax.doubleValue()) {
+			if (_redAnimate.getValue())
+				_statusText.doAnimateOnData();
+
+			if (_lastState == StatusText.DisplayState.RED)
+				return;
+
+			_lastState = StatusText.DisplayState.RED;
+			_statusText.displayStateProperty().set(_lastState);
+			return;
+		}
+		
+		if (forValue >= _wheelRedMin.doubleValue() && forValue <= _wheelRedMax.doubleValue()) {
+			if (_wheelRedAnimate.getValue())
+				_statusText.doAnimateOnData();
+
+			if (_lastState == StatusText.DisplayState.WHEELRED)
+				return;
+
+			_lastState = StatusText.DisplayState.WHEELRED;
+			_statusText.displayStateProperty().set(_lastState);
+			return;
+		}
+
+		if (forValue >= _wheelYellowMin.doubleValue() && forValue <= _wheelYellowMax.doubleValue()) {
+			if (_wheelYellowAnimate.getValue())
+				_statusText.doAnimateOnData();
+
+			if (_lastState == StatusText.DisplayState.WHEELYELLOW)
+				return;
+
+			_lastState = StatusText.DisplayState.WHEELYELLOW;
+			_statusText.displayStateProperty().set(_lastState);
+			return;
+		}
+
+		if (forValue >= _wheelGreenMin.doubleValue() && forValue <= _wheelGreenMax.doubleValue()) {
+			if (_wheelGreenAnimate.getValue())
+				_statusText.doAnimateOnData();
+
+			if (_lastState == StatusText.DisplayState.WHEELGREEN)
+				return;
+
+			_lastState = StatusText.DisplayState.WHEELGREEN;
+			_statusText.displayStateProperty().set(_lastState);
+			return;
+		}
+
+		if (forValue >= _wheelBlueMin.doubleValue() && forValue <= _wheelBlueMax.doubleValue()) {
+			if (_wheelBlueAnimate.getValue())
+				_statusText.doAnimateOnData();
+
+			if (_lastState == StatusText.DisplayState.WHEELBLUE)
+				return;
+
+			_lastState = StatusText.DisplayState.WHEELBLUE;
 			_statusText.displayStateProperty().set(_lastState);
 			return;
 		}

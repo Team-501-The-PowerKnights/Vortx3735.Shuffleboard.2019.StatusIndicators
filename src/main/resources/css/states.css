@@ -1,49 +1,183 @@
 
+/*non vendor-specific properties (without -fx-) defined to get rid of errors*/
+
 .neutral {
     -fx-background-color: 
-        linear-gradient(to bottom, #A4ECF2 0%, #94C7E3 50%, #6080D1 100%, #7CA9EB 100%);
+        linear-gradient(to bottom, #FF3AFC 0%, #DF33DD 50%, #BF2BBD 100%, #9F249E 100%);
+    background-color: 
+        linear-gradient(to bottom, #FF3AFC 0%, #DF33DD 50%, #BF2BBD 100%, #9F249E 100%);
     -fx-background-insets: -3;
     -fx-background-radius: 6;
     -fx-padding: 15 30 15 30;
+    padding: 15 30 15 30;
     -fx-font-family: "Monospace";
+    font-family: "Monospace";
     -fx-font-size: 28px;
+    font-size: 28px;
     -fx-font-weight: bold;
+    font-weight: bold;
     -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
 }
 
 
-.normal {
+.green {
     -fx-background-color: 
+        linear-gradient(to bottom, #A3F0B7 0%, #9EE398 50%, #82CF5F 100%, #91EB7C 100%);
+    background-color: 
         linear-gradient(to bottom, #A3F0B7 0%, #9EE398 50%, #82CF5F 100%, #91EB7C 100%);
     -fx-background-insets: -3;
     -fx-background-radius: 6;
     -fx-padding: 15 30 15 30;
+    padding: 15 30 15 30 ;
     -fx-font-family: "Monospace";
+    font-family: "Monospace";
     -fx-font-size: 28px;
+    font-size: 28px;
     -fx-font-weight: bold;
+    font-weight: bold;
     -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
 }
 
-.warning {
+.yellow {
     -fx-background-color: 
+        linear-gradient(to bottom, #FCFCB6 0%, #F5F378 50%, #FCFC03 100%, #F2F246 100%); 
+    background-color: 
         linear-gradient(to bottom, #FCFCB6 0%, #F5F378 50%, #FCFC03 100%, #F2F246 100%);
-        -fx-background-insets: -3;
-        -fx-background-radius: 6;
-        -fx-padding: 15 30 15 30;
+    -fx-background-insets: -3;
+    -fx-background-radius: 6;
+    -fx-padding: 15 30 15 30;
+    padding: 15 30 15 30;
     -fx-font-family: "Monospace";
+    font-family: "Monospace";
     -fx-font-size: 28px;
+    font-size: 28px;
     -fx-font-weight: bold;
+    font-weight: bold;
     -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
 }
 
-.alert {
+.red {
     -fx-background-color: 
         linear-gradient(to bottom, #FF9C9C 0%, #FC6F6F 50%, #FA0505 100%, #F04646 100%);
-        -fx-background-insets: -3;
-        -fx-background-radius: 6;
-        -fx-padding: 15 30 15 30;
+    background-color: 
+        linear-gradient(to bottom, #FF9C9C 0%, #FC6F6F 50%, #FA0505 100%, #F04646 100%); 
+    -fx-background-insets: -3;
+    -fx-background-radius: 6;
+    -fx-padding: 15 30 15 30;
+    padding: 15 30 15 30;
     -fx-font-family: "Monospace";
+    font-family: "Monospace";
     -fx-font-size: 28px;
+    font-size: 28px;
     -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+
+.black {
+    -fx-background-color: 
+        linear-gradient(to bottom, #151515 0%, #101010 50%, #050505 100%, #000000 100%);
+    background-color: 
+        linear-gradient(to bottom, #151515 0%, #101010 50%, #050505 100%, #000000 100%); 
+    -fx-background-insets: -3;
+    -fx-background-radius: 6;
+    -fx-padding: 15 30 15 30;
+    padding: 15 30 15 30;
+    -fx-font-family: "Monospace";
+    font-family: "Monospace";
+    -fx-font-size: 28px;
+    font-size: 28px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+
+.grey {
+    -fx-background-color: 
+        linear-gradient(to bottom, #CCCCCC 0%, #BBBBBB 50%, #A9A9A9 100%, #989898 100%);
+    background-color: 
+        linear-gradient(to bottom, #CCCCCC 0%, #BBBBBB 50%, #A9A9A9 100%, #989898 100%); 
+    -fx-background-insets: -3;
+    -fx-background-radius: 6;
+    -fx-padding: 15 30 15 30;
+    padding: 15 30 15 30;
+    -fx-font-family: "Monospace";
+    font-family: "Monospace";
+    -fx-font-size: 28px;
+    font-size: 28px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+
+.wheelRed {
+    -fx-background-color: 
+        linear-gradient(to bottom, #FF9C9C 0%, #FC6F6F 50%, #FA0505 100%, #F04646 100%);
+    background-color: 
+        linear-gradient(to bottom, #FF9C9C 0%, #FC6F6F 50%, #FA0505 100%, #F04646 100%); 
+    -fx-background-insets: -3;
+    -fx-background-radius: 6;
+    -fx-padding: 15 30 15 30;
+    padding: 15 30 15 30;
+    -fx-font-family: "Monospace";
+    font-family: "Monospace";
+    -fx-font-size: 28px;
+    font-size: 28px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+
+.wheelYellow {
+    -fx-background-color: 
+        linear-gradient(to bottom, #FCFCB6 0%, #F5F378 50%, #FCFC03 100%, #F2F246 100%);
+    background-color: 
+        linear-gradient(to bottom, #FCFCB6 0%, #F5F378 50%, #FCFC03 100%, #F2F246 100%); 
+    -fx-background-insets: -3;
+    -fx-background-radius: 6;
+    -fx-padding: 15 30 15 30;
+    padding: 15 30 15 30;
+    -fx-font-family: "Monospace";
+    font-family: "Monospace";
+    -fx-font-size: 28px;
+    font-size: 28px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+
+.wheelGreen {
+    -fx-background-color: 
+        linear-gradient(to bottom, #A3F0B7 0%, #9EE398 50%, #82CF5F 100%, #91EB7C 100%);
+    background-color: 
+        linear-gradient(to bottom, #A3F0B7 0%, #9EE398 50%, #82CF5F 100%, #91EB7C 100%);
+    -fx-background-insets: -3;
+    -fx-background-radius: 6;
+    -fx-padding: 15 30 15 30;
+    padding: 15 30 15 30;
+    -fx-font-family: "Monospace";
+    font-family: "Monospace";
+    -fx-font-size: 28px;
+    font-size: 28px;
+    -fx-font-weight: bold;
+    font-weight: bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
+}
+
+.wheelBlue {
+    -fx-background-color: 
+        linear-gradient(to bottom, #0097FF 0%, #0084DF 50%, #0071BF 100%, #005E9F 100%);
+    background-color: 
+        linear-gradient(to bottom, #0097FF 0%, #0084DF 50%, #0071BF 100%, #005E9F 100%);
+    -fx-background-insets: -3;
+    -fx-background-radius: 6;
+    -fx-padding: 15 30 15 30;
+    padding: 15 30 15 30;
+    -fx-font-family: "Monospace";
+    font-family: "Monospace";
+    -fx-font-size: 28px;
+    font-size: 28px;
+    -fx-font-weight: bold;
+    font-weight: bold;
     -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) , 1, 0.0 , 0 , 1);
 }

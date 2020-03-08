@@ -35,7 +35,7 @@ public class StatusText extends VBox implements Initializable, ChangeListener<St
     private Wobble _wobbler;
 
     public enum DisplayState {
-        NEUTRAL, NORMAL, WARNING, ALERT
+        NEUTRAL, BLACK, GREY, GREEN, YELLOW, RED, WHEELRED, WHEELYELLOW, WHEELGREEN, WHEELBLUE
     }
 
     private ObjectProperty<DisplayState> _stateProperty = new SimpleObjectProperty<DisplayState>(DisplayState.NEUTRAL);
